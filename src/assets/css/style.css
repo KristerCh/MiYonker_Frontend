@@ -57,7 +57,7 @@ Table OF Contents
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #333;
 }
 
@@ -156,7 +156,7 @@ textarea.input {
   border: 1px solid #E4E7ED;
   background-color: #FFF;
   text-align: center;
-  font-weight: 700;
+  font-weight: 100;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1213,6 +1213,7 @@ textarea.input {
 
 .aside+.aside {
   margin-top: 30px;
+  width: 150px;
 }
 
 .aside>.aside-title {
@@ -1224,11 +1225,11 @@ textarea.input {
 /*-- checkbox Filter --*/
 
 .checkbox-filter>div+div {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .checkbox-filter .input-radio label, .checkbox-filter .input-checkbox label {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .checkbox-filter .input-radio label small, .checkbox-filter .input-checkbox label small {
@@ -1242,11 +1243,11 @@ textarea.input {
 }
 
 .noUi-target {
-  background-color: #FFF;
+  background-color: #D10024;
   -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid #E4E7ED;
-  border-radius: 0px;
+  box-shadow: salmon;
+  border: 2px solid #E4E7ED;
+  border-radius: 2px;
 }
 
 .noUi-connect {
@@ -1254,18 +1255,18 @@ textarea.input {
 }
 
 .noUi-horizontal {
-  height: 6px;
+  height: 30px;
 }
 
 .noUi-horizontal .noUi-handle {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   left: -6px;
   top: -4px;
   border: none;
   background: #D10024;
   -webkit-box-shadow: none;
-  box-shadow: none;
+  box-shadow: salmon;
   border-radius: 50%;
 }
 
@@ -1275,7 +1276,7 @@ textarea.input {
 
 .price-filter .input-number {
   display: inline-block;
-  width: calc(50% - 7px);
+  width: calc(60% - 5px);
 }
 
 /*----------------------------*\
