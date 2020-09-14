@@ -13,6 +13,11 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
   }
+
+
+.compont {
+  margin-top: 10%;
+  }
   
   a {
     color: #009970;

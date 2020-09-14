@@ -411,8 +411,6 @@ textarea.input {
 \*----------------------------*/
 
 #top-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: #008060 ;
 }
 
@@ -445,8 +443,6 @@ textarea.input {
 \*----------------------------*/
 
 #header {
-  padding-top: 15px;
-  padding-bottom: 15px;
   background-color: #f6f6f7;
 }
 
@@ -463,7 +459,7 @@ textarea.input {
 \*----------------------------*/
 
 .header-search {
-  padding: 15px 0px;
+  padding: 20px 0px;
 }
 
 .header-search form {
@@ -496,7 +492,7 @@ textarea.input {
 
 .header-ctn {
   float: right;
-  padding: 15px 0px;
+  padding: 20px 0px;
 }
 
 .header-ctn>div {
@@ -635,7 +631,7 @@ textarea.input {
 }
 
 .main-nav>li>a {
-  padding: 20px 0px;
+  padding: 18px 0px;
 }
 
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
@@ -679,7 +675,7 @@ textarea.input {
     width: 0%;
     overflow: hidden;
     z-index: 22;
-    padding-top: 60px;
+    padding-top: 60spx;
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
