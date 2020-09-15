@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListPartsComponent } from './components/list-parts/list-parts.component';
-import { FilterComponent } from './components/filter/filter.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     FooterComponent,
     ListPartsComponent,
-    FilterComponent,
-    AboutComponent
+    AboutComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

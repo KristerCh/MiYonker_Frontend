@@ -589,7 +589,7 @@ textarea.input {
   display: inline-block;
   width: calc(50% - 0px);
   padding: 12px;
-  background-color: #D10024;
+  background-color: #008080;
   color: #FFF;
   text-align: center;
   font-weight: 700;
@@ -599,7 +599,7 @@ textarea.input {
 
 .cart-dropdown .cart-btns>a:first-child {
   margin-right: -4px;
-  background-color: #016164;
+  background-color: #008080;
 }
 
 .cart-dropdown .cart-btns>a:hover {
@@ -1478,7 +1478,7 @@ textarea.input {
 }
 
 .product-details .product-rating>i.fa-star {
-  color: #D10024;
+  color: #009950;
 }
 
 .product-details .review-link {
@@ -1490,7 +1490,7 @@ textarea.input {
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #D10024;
+  color: #016064;
 }
 
 .product-details .product-price .product-old-price {
@@ -1533,7 +1533,7 @@ textarea.input {
   border: 2px solid transparent;
   height: 40px;
   padding: 0 30px;
-  background-color: #ef233c;
+  background-color: #008080;
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
@@ -1549,15 +1549,15 @@ textarea.input {
   width: 40px;
   height: 40px;
   line-height: 38px;
-  color: #D10024;
+  color: #016164;
   opacity: 0;
   visibility: hidden;
 }
 
 .product-details .add-to-cart .add-to-cart-btn:hover {
   background-color: #FFF;
-  color: #D10024;
-  border-color: #D10024;
+  color: #009970;
+  border-color: #009970;
   padding: 0px 30px 0px 50px;
 }
 
@@ -1643,11 +1643,11 @@ textarea.input {
 #product-tab .tab-nav li a {
   display: block;
   font-weight: 700;
-  color: #8D99AE;
+  color: #008000;
 }
 
 #product-tab .tab-nav li.active a {
-  color: #009970;
+  color: #008000;
 }
 
 #product-tab .tab-nav li a:after {
