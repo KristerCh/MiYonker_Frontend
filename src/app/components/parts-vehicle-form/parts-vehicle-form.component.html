@@ -1,0 +1,64 @@
+<section id="contact" class="contact">
+    <div class="container compont">
+        <div class="row">
+            <div class="col-lg-6">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="section-title">
+                        <h2>REGISTRAR PARTES</h2>
+                    </div>
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                        <div class="form-row">
+
+                            <div class="col-md-6 form-group">
+                                <input type="number" name="id" class="form-control" id="id" placeholder="ID"
+                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                          
+                                <div class="col-md-6 form-group">
+                                    <input type="text" part="name" class="form-control" id="part" placeholder="PARTE DEL VEHÍCULO"
+                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="VEHÍCULO"
+                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="Nombre" class="form-control" id="name" placeholder="NOMBRE DE LA PARTE"
+                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                          
+                                <div class="col-md-6 form-group">
+                                    <input type="number" name="id" class="form-control" id="id" placeholder="ID DE LA PARTE"
+                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="detalle" id="detail" placeholder="DETALLE"
+                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">GUARDAR</button></div>
+                    </form>  
+                </div>                 
+            </div>
+               
+      </div>
+    </div>
+</section>
