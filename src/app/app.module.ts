@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductComponent } from './components/product/product.component';
 import { StoreFormComponent } from './components/store-form/store-form.component';
 import { VehiclesFormComponent } from './components/vehicles-form/vehicles-form.component';
+import { PartsVehicleFormComponent } from './components/parts-vehicle-form/parts-vehicle-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { VehiclesFormComponent } from './components/vehicles-form/vehicles-form.
     AboutComponent,
     ProductComponent,
     StoreFormComponent,
-    VehiclesFormComponent
+    VehiclesFormComponent,
+    PartsVehicleFormComponent
   ],
   imports: [
     BrowserModule,
