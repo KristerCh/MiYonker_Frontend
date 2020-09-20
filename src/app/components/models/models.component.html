@@ -1,0 +1,19 @@
+<h1>Listado de Modelos</h1>
+<button type="button" class="btn btn-success mb-2"><i class="fa fa-plus"></i>
+    Crear</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Models</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let modelo of modelos">
+        <th scope="row">{{modelo.id}}</th>
+        <td>{{modelo.model}}</td>
+        <td>
+        </tbody>
+    </table>
+
+<p>models works!</p>

@@ -1,4 +1,4 @@
 export class Brands{
-    id: Number;
-    name: String;
+    public id: Number;
+    public name: String;
 }
