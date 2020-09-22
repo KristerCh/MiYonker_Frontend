@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-parts-vehicle-form',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parts-vehicle-form.component.css']
 })
 export class PartsVehicleFormComponent {
+  form: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      id: 0,
+      partId: ['', [Validators.required]],
+      vehicleId: ['', [Validators.required]]
+    })
+   }
 
 
 }

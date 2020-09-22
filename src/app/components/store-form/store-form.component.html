@@ -1,129 +1,98 @@
 <section id="contact" class="contact">
     <div class="container compont">
         <div class="row">
-            <div class="col-lg-6">
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="section-title">
-                        <h2>Crear tienda</h2>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="section-title mb-0">
+                    <h2>REGISTRAR NUEVA TIENDA</h2>
+                </div>
+
+                <form [formGroup]="formulario" class="php-email-form mt-4">
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="rtn" [class]="this.formulario.get('rtn')" class="form-control" id="rtn" placeholder="RTN"/>
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" [class]="this.formulario.get('name')" class="form-control" id="name" placeholder="NOMBRE DEL YONKER"/>
+                            <div class="validate"></div>
+                        </div>
                     </div>
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="rtn" class="form-control" id="rtn" placeholder="RTN"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                          
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="NOMBRE DEL YONKER"
-                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="address" id="address" placeholder="DIRECCIÓN"
-                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="address" [class]="this.formulario.get('address')" id="address" placeholder="DIRECCIÓN"/>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="owner_id" class="form-control" [class]="this.formulario.get('owner_id')" id="owner_id" placeholder="RTN Propietario"/>
                             <div class="validate"></div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="owner_id" class="form-control" id="owner_id" placeholder="CLAVE DE PROPIETARIO"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                          
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="owner" class="form-control" id="owner" placeholder="PROPIETARIO"
-                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="contact_person" id="contact_person" placeholder="PERSONA DE CONTÁCTO"
-                                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="owner" class="form-control" [class]="this.formulario.get('owner')" id="owner" placeholder="PROPIETARIO"/>
                             <div class="validate"></div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="phone" class="form-control" id="phone" placeholder="TÉLEFONO"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="CORREO ELECTRÓNICO" data-rule="email" data-msg="Please enter a valid email" />
-                                <div class="validate"></div>
-                            </div>
-                                
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="contact_person" [class]="this.formulario.get('contact_person')" id="contact_person" placeholder="Persona Contacto"/>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="phone" class="form-control" id="phone"[class]="this.formulario.get('phone')" placeholder="Telefono"/>
+                            <div class="validate"></div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="facebook" class="form-control" id="facebook" placeholder="FACEBOOK"
-                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                          
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="website" class="form-control" id="website" placeholder="PÁGINA WEB"
-                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
+                        <div class="col-md-6 form-group">
+                            <input type="email" class="form-control" name="email" id="email" [class]="this.formulario.get('email')" placeholder="Correo Electronico" />
+                            <div class="validate"></div>
                         </div>
-                        <div class="mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="facebook" class="form-control" [class]="this.formulario.get('facebook')" id="facebook" placeholder="Pagina de Facebook"/>
+                            <div class="validate"></div>
                         </div>
-                        <div class="text-center"><button type="submit">GUARDAR</button></div>
-                    </form>  
-                </div>                 
+
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="website" class="form-control" [class]="this.formulario.get('website')" id="website" placeholder="Página Web"/>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center"><button type="submit">GUARDAR</button></div>
+                </form>
+
             </div>
-            <div class="col-lg-6" data-aos-delay="100">
-                  <div class="section-title">
-                      <h2 class="title">Registros</h2>
-                      <div class="section-nav">
-                          <div id="slick-nav-3" class="products-slick-nav"></div>
-                      </div>
-                  </div>
 
-                  <div class="products-widget-slick" data-nav="#slick-nav-3">
-                      <div>
-                          <!-- product widget -->
-                          
-                          <div class="product-widget">
-                            <div class="info">
-                                <p class="product-name">Nombre</p>
-                                <h4 class="product-category">Descripcion</h4>
-                                <p><a href="#">Editar</a>|<a href="#">Eliminar</a></p>
-                            </div>
-                        </div>
-                          <!-- /product widget -->
+            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
 
-                          <!-- product widget -->
-                          <div class="product-widget">
-                            <div class="info">
-                                <p class="product-name">Nombre</p>
-                                <h4 class="product-category">Descripcion</h4>
-                                <p><a href="#">Editar</a>|<a href="#">Eliminar</a></p>
-                            </div>
-                        </div>
-                          <!-- /product widget -->
+                <div class="section-title mb-0">
+                    <h2>REGISTROS</h2>
+                </div>
 
-                          <!-- product widget -->
-                          <div class="product-widget">
-                              <div class="info">
-                                  <p class="product-name">Nombre</p>
-                                  <h4 class="product-category">Descripcion</h4>
-                                  <p><a href="#">Editar</a>|<a href="#">Eliminar</a></p>
-                              </div>
-                          </div>
-          
-                      </div>
-                
-              
+                <div class="row">
+
+                    <div class="info col-lg-auto">
+                        <table class="table table-sm">
+                            <tr *ngFor="let store of storesService.list">
+                                <td>{{store.rtn}}</td>
+                                <td>{{store.name}}</td>
+                                <td>{{store.owner}}</td>
+                                <td>{{store.phone}}</td>
+                                <td>{{store.email}}</td>
+                                <td><i class="far fa-edit fa-lg" (click)="editarTienda(tienda)" style="cursor: pointer;"></i></td>
+                                <td><i class="far fa-trash-alt fa-lg" (click)="eliminarTienda(tienda.id)" style="cursor: pointer;"></i></td>
+                            </tr>
+                        </table>
+                    </div>
 
                 </div>
-              </div>     
-      </div>
+
+            </div>
+        </div>
     </div>
 </section>
