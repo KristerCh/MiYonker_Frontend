@@ -11,65 +11,65 @@
                 <form [formGroup]="formula" class="php-email-form mt-4">
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="rtn" fromControlName="rtn" class="form-control" id="rtn" placeholder="RTN"/>
+                            <input type="text" name="rtn" formControlName="rtn" class="form-control" id="rtn" placeholder="RTN"/>
                             <div class="validate"></div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" fromControlName="name" id="name" placeholder="Nombre del Yonker"/>
+                            <input type="text" name="name" class="form-control" formControlName="name" id="name" placeholder="Nombre del Yonker"/>
                             <div class="validate"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="address" fromControlName="address" id="address" placeholder="Direccion"/>
+                        <input type="text" class="form-control" name="address" formControlName="address" id="address" placeholder="Direccion"/>
                         <div class="validate"></div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="latitude" class="form-control" fromControlName="latitude" id="latitude" placeholder="Latitud"/>
+                            <input type="text" name="latitue" class="form-control" formControlName="latitue" id="latitude" placeholder="Latitud"/>
                             <div class="validate"></div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" name="longitude" class="form-control" fromControlName="longitude" id="longitude" placeholder="Longitud"/>
+                            <input type="text" name="longitude" class="form-control" formControlName="longitude" id="longitude" placeholder="Longitud"/>
                             <div class="validate"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="owner_id" class="form-control" fromControlName="owner_id" id="owner_id" placeholder="RTN Propietario"/>
+                            <input type="text" name="owner_id" class="form-control" formControlName="owner_id" id="owner_id" placeholder="RTN Propietario"/>
                             <div class="validate"></div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" name="owner" class="form-control" fromControlName="owner" id="owner" placeholder="Propietario"/>
+                            <input type="text" name="owner" class="form-control" formControlName="owner" id="owner" placeholder="Propietario"/>
                             <div class="validate"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="contact_person" fromControlName="contact_person" id="contact_person" placeholder="Persona Contacto"/>
+                        <input type="text" class="form-control" name="contact_person" formControlName="contact_person" id="contact_person" placeholder="Persona Contacto"/>
                         <div class="validate"></div>
                     </div>
                     <div class="form-row">
 
                         <div class="col-md-6 form-group">
-                            <input type="text" name="phone" class="form-control" fromControlName="phone" id="phone" placeholder="Telefono"/>
+                            <input type="text" name="phone" class="form-control" formControlName="phone" id="phone" placeholder="Telefono"/>
                             <div class="validate"></div>
                         </div>
                         <div class="col-md-6 form-group">
-                            <input type="email" class="form-control" name="email" fromControlName="email" id="email" placeholder="Correo Electronico" />
+                            <input type="text" class="form-control" name="email" formControlName="email" id="email" placeholder="Correo Electronico" />
                             <div class="validate"></div>
                         </div>
 
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="facebook" class="form-control" fromControlName="facebook" id="facebook" placeholder="Pagina de Facebook"/>
+                            <input type="text" name="facebook" class="form-control" formControlName="facebook" id="facebook" placeholder="Pagina de Facebook"/>
                             <div class="validate"></div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" name="website" class="form-control" fromControlName="website" id="website" placeholder="Página Web"/>
+                            <input type="text" name="website" class="form-control" formControlName="website" id="website" placeholder="Página Web"/>
                             <div class="validate"></div>
                         </div>
                     </div>
@@ -98,12 +98,13 @@
                                 <th>Correo</th>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let store of tiendas">
+                                <tr *ngFor="let store of stores">
                                     <td>{{store.rtn}}</td>
                                     <td>{{store.name}}</td>
                                     <td>{{store.owner}}</td>
                                     <td>{{store.phone}}</td>
                                     <td>{{store.email}}</td>
+                                    
                                     <td><i class="far fa-edit fa-lg" (click)="editarTienda(tienda)" style="cursor: pointer;"></i></td>
                                     <td><i class="far fa-trash-alt fa-lg" (click)="eliminarTienda(tienda.id)" style="cursor: pointer;"></i></td>
                                 </tr>

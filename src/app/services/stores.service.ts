@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Stores } from 'src/app/modelos/Stores';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -11,9 +11,17 @@ export class StoresService {
   myAppUrl = 'https://localhost:44370/';
   myApiUrl = 'api/stores';
   //list: Stores[];
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': '*/*'
+    })
+  }
+
   private update = new BehaviorSubject<Stores>([] as any);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } 
 
   guardarTienda(tienda: Stores): Observable<Stores>{
     return this.http.post<Stores>(this.myAppUrl + this.myApiUrl, tienda);
@@ -24,7 +32,7 @@ export class StoresService {
   }
 
   obtenerTiendas(){
-    return this.http.get<Stores[]>(this.myAppUrl + this.myApiUrl);
+    return this.http.get<Stores[]>(this.myAppUrl + this.myApiUrl, this.httpOptions);
   }
 
   actualizarTienda(id: number, tienda: Stores): Observable<Stores>{

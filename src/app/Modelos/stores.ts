@@ -1,13 +1,13 @@
 
 export class Stores{
-    id?: number;
-    rtn: number;
+    id: Number;
+    rtn: Number;
     name: String;
     address: String;
-    latitude: Float32Array;
-    longitude: Float32Array;
+    latitue: Number;
+    longitude: Number;
     owner: String;
-    owner_id: number;
+    owner_id: Number;
     contact_person: String;
     phone: String;
     email: String;
