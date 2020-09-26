@@ -10,7 +10,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class StoresService {
   myAppUrl = 'https://localhost:44370/';
   myApiUrl = 'api/stores';
-  list: Stores[];
+  //list: Stores[];
   private update = new BehaviorSubject<Stores>([] as any);
 
   constructor(private http: HttpClient) { }
@@ -24,10 +24,7 @@ export class StoresService {
   }
 
   obtenerTiendas(){
-    this.http.get(this.myAppUrl + this.myApiUrl).toPromise()
-              .then(data => {
-                this.list = data as Stores[];
-              })
+    return this.http.get<Stores[]>(this.myAppUrl + this.myApiUrl);
   }
 
   actualizarTienda(id: number, tienda: Stores): Observable<Stores>{
@@ -38,7 +35,7 @@ export class StoresService {
     this.update.next(tienda);
   }
 
-  obtenerTienda(): Observable<Stores>{
-    return this.update.asObservable();
+  obtenerTienda(id: Number): Observable<Stores>{
+    return this.http.get<Stores>(this.myAppUrl + this.myApiUrl + id);
   }
 }

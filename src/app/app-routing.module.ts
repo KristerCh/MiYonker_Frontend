@@ -8,12 +8,12 @@ import { VehiclesFormComponent } from './components/vehicles-form/vehicles-form.
 import { PartsVehicleFormComponent} from './components/parts-vehicle-form/parts-vehicle-form.component';
 
 const routes: Routes = [
-  {path: '', component: AboutComponent},
-  {path: 'listparts', component: ListPartsComponent },
-  {path: 'product', component: ProductComponent},
-  {path: 'store', component: StoreFormComponent},
-  {path: 'vehicles', component: VehiclesFormComponent},
-  {path: 'partsvehicle', component: PartsVehicleFormComponent}
+  {path: "", component: AboutComponent},
+  {path: "listparts", component: ListPartsComponent },
+  {path: "product", component: ProductComponent},
+  {path: "create-store", component: StoreFormComponent},
+  {path: "vehicles", component: VehiclesFormComponent},
+  {path: "partsvehicle", component: PartsVehicleFormComponent}
 ];
 
 @NgModule({
