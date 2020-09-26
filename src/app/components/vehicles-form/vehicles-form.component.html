@@ -1,48 +1,68 @@
-<h4>Vehicles Works!</h4>
-<!-- <section id="contact" class="contact">
+<section id="contact" class="contact">
     <div class="container compont">
         <div class="row">
-            <div class="col-lg" data-aos="fade-right">
-                <div class="section-title">
-                    <h1>Registrar Vehiculos</h1>
-                </div>
-                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-                        <div class="form-row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="brandId" class="form-control" id="brandId"
-                                    placeholder="Id Marca" data-rule="minlen:4" data-msg="Ingrese el id marca" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="year" class="form-control" name="year" id="year" placeholder="Año"
-                                    data-rule="year" data-msg="Por favor ingrese un año valido" />
-                                <div class="validate"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="modelId" id="modelId" placeholder="Id Modelo"
-                                data-rule="minlen:4" data-msg="Ingrese el id modelo" />
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="brandControlSelect">Seleccione una Marca</label>
-                            <select name="Brands" class="form-control" id="brandControlSelect"
-                                [(ngModel)]="Brands.name">
-                                <option *ngFor="let Brands of Brands" [value]="Brands.name">{{Brands.name}}</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="registrar-vehiculo"> El vehiculo se ha registrado.</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Registrar Vehiculo</button></div>
-                    </form>
-                </div>
-            </div>
 
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="section-title mb-0 justify-content-center">
+                    <h2>Registrar Nuevo vehiculo</h2>
+                </div>
+
+                <form class="php-email-form">
+                        <div class="col-md-auto form-group">
+                            <span class="input-group-text">Seleccione un Modelo</span>
+                            <select class="form-control" name="modelo" id="modelo" [(ngModel)]="vehiculo.modelId">
+                                <option *ngFor="let models of modelo" [value]="models.id">{{ models.model }}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-auto form-group">
+                            <span class="input-group-text">Seleccione una Marca</span>
+                            <select class="form-control" name="marca" id="marca" [(ngModel)]="vehiculo.brandId">
+                                <option *ngFor="let brands of marca" [value]="brands.id">{{ brands.name }}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-auto form-group">
+                            <input type="text" name="year" [(ngModel)]="vehiculo.year" class="form-control" id="year" placeholder="Año"/>
+                        </div>
+                    <div class="text-center"><button type="submit" (click)="guardarVehiculo()">GUARDAR</button></div>
+                </form>
+
+            </div>
+            
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="section-title mb-0">
+                    <h2>Registros</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="info col-lg-auto">
+                        <table class="table table-sm">
+                            <thead>
+                                <th>Año</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Acciones</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let auto of vehiculo">
+                                    <td>{{auto.year}}</td>
+                                    <td>{{auto.brands.id}}</td>
+                                    <td>{{auto.models.id}}</td>
+                                    
+                                    <td><i class="far fa-edit fa-lg" (click)="editarTienda(tienda)" style="cursor: pointer;"></i>
+                                    <i class="far fa-trash-alt fa-lg" (click)="eliminarTienda(tienda.id)" style="cursor: pointer;"></i></td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
-</section> -->
+</section>

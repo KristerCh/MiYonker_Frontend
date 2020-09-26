@@ -8,72 +8,53 @@
                     <h2>Registrar Nueva Tienda</h2>
                 </div>
 
-                <form [formGroup]="formula" class="php-email-form mt-4">
+                <form class="php-email-form mt-4">
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="rtn" formControlName="rtn" class="form-control" id="rtn" placeholder="RTN"/>
-                            <div class="validate"></div>
+                            <input type="text" name="rtn" [(ngModel)]="stores.rtn" class="form-control" id="rtn" placeholder="Rtn"/>
                         </div>
-
                         <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" formControlName="name" id="name" placeholder="Nombre del Yonker"/>
-                            <div class="validate"></div>
+                            <input type="text" name="name" [(ngModel)]="stores.name" class="form-control" id="name" placeholder="Nombre del Yonker"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="address" formControlName="address" id="address" placeholder="Direccion"/>
-                        <div class="validate"></div>
+                        <input type="text" class="form-control" [(ngModel)]="stores.address" name="address" id="address" placeholder="Direccion"/>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="latitue" class="form-control" formControlName="latitue" id="latitude" placeholder="Latitud"/>
-                            <div class="validate"></div>
+                            <input type="text" name="latitue" [(ngModel)]="stores.latitue" class="form-control" id="latitude" placeholder="Latitud"/>
                         </div>
-
                         <div class="col-md-6 form-group">
-                            <input type="text" name="longitude" class="form-control" formControlName="longitude" id="longitude" placeholder="Longitud"/>
-                            <div class="validate"></div>
+                            <input type="text" name="longitude" [(ngModel)]="stores.longitude" class="form-control"  id="longitude" placeholder="Longitud"/>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="owner_id" class="form-control" formControlName="owner_id" id="owner_id" placeholder="RTN Propietario"/>
-                            <div class="validate"></div>
+                            <input type="text" name="owner_id" [(ngModel)]="stores.owner_id" class="form-control" id="owner_id" placeholder="RTN Propietario"/>
                         </div>
-
                         <div class="col-md-6 form-group">
-                            <input type="text" name="owner" class="form-control" formControlName="owner" id="owner" placeholder="Propietario"/>
-                            <div class="validate"></div>
+                            <input type="text" name="owner" [(ngModel)]="stores.owner" class="form-control" id="owner" placeholder="Propietario"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="contact_person" formControlName="contact_person" id="contact_person" placeholder="Persona Contacto"/>
-                        <div class="validate"></div>
-                    </div>
-                    <div class="form-row">
-
-                        <div class="col-md-6 form-group">
-                            <input type="text" name="phone" class="form-control" formControlName="phone" id="phone" placeholder="Telefono"/>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" name="email" formControlName="email" id="email" placeholder="Correo Electronico" />
-                            <div class="validate"></div>
-                        </div>
-
+                        <input type="text" class="form-control" [(ngModel)]="stores.contact_person" name="contact_person" id="contact_person" placeholder="Persona Contacto"/>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="facebook" class="form-control" formControlName="facebook" id="facebook" placeholder="Pagina de Facebook"/>
-                            <div class="validate"></div>
+                            <input type="text" name="phone" [(ngModel)]="stores.phone" class="form-control" id="phone" placeholder="Telefono"/>
                         </div>
-
                         <div class="col-md-6 form-group">
-                            <input type="text" name="website" class="form-control" formControlName="website" id="website" placeholder="Página Web"/>
-                            <div class="validate"></div>
+                            <input type="text" class="form-control" [(ngModel)]="stores.email" name="email" id="email" placeholder="Correo Electronico" />
                         </div>
                     </div>
-
+                    <div class="form-row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="facebook" [(ngModel)]="stores.facebook" class="form-control" id="facebook" placeholder="Pagina de Facebook"/>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="website" [(ngModel)]="stores.website" class="form-control" id="website" placeholder="Página Web"/>
+                        </div>
+                    </div>
                     <div class="text-center"><button type="submit" (click)="agregar()">GUARDAR</button></div>
                 </form>
 

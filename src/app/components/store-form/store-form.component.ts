@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { StoresService } from 'src/app/services/stores.service';
 import { Subscription } from 'rxjs';
 import { Stores } from 'src/app/Modelos/stores';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-store-form',
@@ -12,29 +13,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class StoreFormComponent implements OnInit {
 
-  tiendas: Stores;
-  stores: Stores[];
+  stores: Stores;
+  tiendas: Stores[];
 
   constructor(
-    private formBuilder: FormBuilder,
     private storeService: StoresService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ){}
-
-  formula = this.formBuilder.group({
-    rtn: ['', [Validators.required]],
-    name: ['', [Validators.required, Validators.maxLength(60)]],
-    address: ['', [Validators.maxLength(150)]],
-    latitue: [''],
-    longitude: [''],
-    owner: ['', [Validators.required]],
-    owner_id: [''],
-    contact_person: [''],
-    phone: ['', [Validators.required]],
-    email: ['', [Validators.required]],
-    facebook: [''],
-    website: ['']  
-  })
 
   ngOnInit(){
     this.getTiendas();
@@ -42,13 +28,12 @@ export class StoreFormComponent implements OnInit {
 
   getTiendas(){
     this.storeService.obtenerTiendas().subscribe(data =>{
-      this.stores = data;
+      this.tiendas = data;
     })
   }
 
   agregar(){
-    console.log(this.formula.value);
-    this.storeService.guardarTienda(this.tiendas).subscribe(data => {
+    this.storeService.guardarTienda(this.stores).subscribe(data => {
       this.toastrService.success('Registro Agregado', 'La Tienda fue agregada');
       this.storeService.obtenerTiendas();
     })

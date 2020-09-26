@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Stores } from 'src/app/modelos/Stores';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,19 +10,12 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 export class StoresService {
   myAppUrl = 'https://localhost:44370/';
-  myApiUrl = 'api/stores';
+  myApiUrl = 'api/stores/';
   //list: Stores[];
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Accept': '*/*'
-    })
-  }
 
-  private update = new BehaviorSubject<Stores>([] as any);
-
-  constructor(private http: HttpClient) { } 
+  constructor(private http: HttpClient,
+    private router: Router) { } 
 
   guardarTienda(tienda: Stores): Observable<Stores>{
     return this.http.post<Stores>(this.myAppUrl + this.myApiUrl, tienda);
@@ -32,16 +26,13 @@ export class StoresService {
   }
 
   obtenerTiendas(){
-    return this.http.get<Stores[]>(this.myAppUrl + this.myApiUrl, this.httpOptions);
+    return this.http.get<Stores[]>(this.myAppUrl + this.myApiUrl);
   }
 
   actualizarTienda(id: number, tienda: Stores): Observable<Stores>{
     return this.http.put<Stores>(this.myAppUrl + this.myApiUrl + id, tienda);
   }
 
-  actualizar(tienda){
-    this.update.next(tienda);
-  }
 
   obtenerTienda(id: Number): Observable<Stores>{
     return this.http.get<Stores>(this.myAppUrl + this.myApiUrl + id);
